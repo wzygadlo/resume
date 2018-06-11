@@ -52,7 +52,8 @@ class Resume:
                 SQL/SQLPlus)''')
 
         elif skill == "Cloud Solutions":
-            print("Openstack"
+            print("AWS"
+                  "Openstack"
                   "Vagrant"
                   "Docker"
                   "OwnCloud")
@@ -61,8 +62,15 @@ class Resume:
         work = input("Wokrk History: ")
         start_time = time.strftime("%m/%Y")
         end_time = time.strftime("%m/%Y")
+        
+        if start_time == "08/2017" and end_time == "current":
+            work_history = {"Hyperwallet Systems Inc": "DevOps Engineer / Linux Senior Admin",
+                            "Location": "Vancouver, Canada",
+                            "Duties": ['''
+                            ''']}
+            print(work_history)        
 
-        if start_time == "05/2013" and end_time == "Current":
+        elif start_time == "05/2013" and end_time == "07/2017":
             work_history = {"Cisco Systems LTD": "Systems Engineer",
                             "Location": "Southampton, UK",
                             "Duties": ['''
