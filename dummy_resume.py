@@ -1,9 +1,11 @@
-#!/usr/bin/python3
-# title           :My_resume.py
-# description     :Useful information about my career
-# author          :Wojtek Zygadlo
-# version         :0.1
-# python_version  :3.5.3
+#!/usr/bin/env python3
+# title           : My_resume.py
+# description     : Useful information about my career
+# author          : Wojtek Zygadlo
+# email:          : wzygadlo@outlook.com
+# phone:          : +1 778 751 3750
+# version         : 1.0
+# python_version  : 3.6
 
 import education
 import work_experiance as work
@@ -18,20 +20,17 @@ class Resume:
 
     def bio(self):
         info = '''Overall 10 years of enterprise level UNIX administration experience with strong Linux
-               (RedHat, SLES, Ubuntu), Scripting(BASH, Python).
+               (RedHat, SLES, Ubuntu, Archlinux is the best), Scripting (BASH, Python).
                Deep understanding on CISCO networks and hardware, quick problem resolution skills.
                Around 2,5 years experience in Mobile Networks (UMTS).
-               4 years in Broadcasting industry (satellite/cable IPTV solutions)'''
+               4 years in Broadcasting industry (satellite/cable IPTV solutions)
+               4 years in DevOps environment'''
         print(info)
 
     def skills(self):
         skill = input()
         if skill == "Linux":
-            print("RHEL5/6/7, Debian, Ubuntu, SLES 11/12"
-                  '''FreeBSD
-                  Bonding
-                  IPtables
-                  RAID, LVM, LUKS Disk Encryption")''')
+            print('''RHEL5/6/7, Debian, Ubuntu, SLES 11/12, Archlinux, and many more''')
 
         elif skill == "Network Skills":
             print('''Switching (VLAN, Trunking, Link Aggregation), Wireless
@@ -39,11 +38,11 @@ class Resume:
                 Load balancing (HAProxy),
                 FibreChannel,
                 TCP/IP,
-                Network monitoring and analysing (Wireshark, nmap,Nagios),
+                Network monitoring and analysing (Wireshark, nmap, Nagios),
                 Server setup (Apache, nginx, SSH, FTP, DHCP, NTP, SMB, NFS, OpenLDAP, VPN, AFP, SSL)''')
 
         elif skill == "Programming":
-            print("Shell/BASH" "Python")
+            print("Shell/BASH", "Python")
 
         elif skill == "Database":
             print('''Oracle 10/11g DBA"
@@ -52,22 +51,29 @@ class Resume:
                 SQL/SQLPlus)''')
 
         elif skill == "Cloud Solutions":
-            print("AWS"
+            print("AWS (EC2, VPC, CloudFormation, Lambda, Route53....)"
                   "Openstack"
                   "Vagrant"
                   "Docker"
-                  "OwnCloud")
+                  )
+        elif skill == "DevOps Tools":
+            print(''' Teamcity/Jenkins/Travis CI
+                Flyways,
+                GitHub
+                Jfrog Artifactory,
+                ELK / NewRelic / Nagios,
+                SonarQube 
+                ''')
 
     def work_history(self):
-        work = input("Wokrk History: ")
+        work = input("Work History: ")
         start_time = time.strftime("%m/%Y")
         end_time = time.strftime("%m/%Y")
         
         if start_time == "08/2017" and end_time == "current":
-            work_history = {"Hyperwallet Systems Inc": "DevOps Engineer / Linux Senior Admin",
+            work_history = {"PayPal/Hyperwallet Systems Inc": "DevOps Engineer / Linux Senior Admin",
                             "Location": "Vancouver, Canada",
-                            "Duties": ['''
-                            ''']}
+                            "Duties": ["A lot"]}
             print(work_history)        
 
         elif start_time == "05/2013" and end_time == "07/2017":

@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>dummy_resume.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #000000;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #008080; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+dummy_resume.py</font>
+</center></td></tr></table>
+<pre><span class="s0">#!/usr/bin/env python3</span>
+# title           : My_resume.py
+# description     : Useful information about my career
+# author          : Wojtek Zygadlo
+# email:          : wzygadlo@outlook.com
+# phone:          : +1 778 751 3750
+# version         : 1.0
+# python_version  : 3.6
+
+<span class="s2">import </span>education
+<span class="s2">import </span>work_experiance <span class="s2">as </span>work
+<span class="s2">import </span>skills
+<span class="s2">import </span>hobby
+<span class="s2">import </span>time
+
+
+<span class="s2">class </span>Resume:
+    <span class="s2">def </span>__init__(level=<span class="s3">&quot;experienced&quot;</span>):
+        super()
+
+    <span class="s2">def </span>bio(self):
+        info = <span class="s3">'''Overall 10 years of enterprise level UNIX administration experience with strong Linux 
+               (RedHat, SLES, Ubuntu, Archlinux is the best), Scripting (BASH, Python). 
+               Deep understanding on CISCO networks and hardware, quick problem resolution skills. 
+               Around 2,5 years experience in Mobile Networks (UMTS). 
+               4 years in Broadcasting industry (satellite/cable IPTV solutions) 
+               4 years in DevOps environment'''</span>
+        print(info)
+
+    <span class="s2">def </span>skills(self):
+        skill = input()
+        <span class="s2">if </span>skill == <span class="s3">&quot;Linux&quot;</span>:
+            print(<span class="s3">'''RHEL5/6/7, Debian, Ubuntu, SLES 11/12, Archlinux, and many more'''</span>)
+
+        <span class="s2">elif </span>skill == <span class="s3">&quot;Network Skills&quot;</span>:
+            print(<span class="s3">'''Switching (VLAN, Trunking, Link Aggregation), Wireless 
+                Routing (RIPv2, OSPF, EIGRP), 
+                Load balancing (HAProxy), 
+                FibreChannel, 
+                TCP/IP, 
+                Network monitoring and analysing (Wireshark, nmap, Nagios), 
+                Server setup (Apache, nginx, SSH, FTP, DHCP, NTP, SMB, NFS, OpenLDAP, VPN, AFP, SSL)'''</span>)
+
+        <span class="s2">elif </span>skill == <span class="s3">&quot;Programming&quot;</span>:
+            print(<span class="s3">&quot;Shell/BASH&quot;</span>, <span class="s3">&quot;Python&quot;</span>)
+
+        <span class="s2">elif </span>skill == <span class="s3">&quot;Database&quot;</span>:
+            print(<span class="s3">'''Oracle 10/11g DBA&quot; 
+                MySQL DBA, 
+                MongoDB (query level), 
+                SQL/SQLPlus)'''</span>)
+
+        <span class="s2">elif </span>skill == <span class="s3">&quot;Cloud Solutions&quot;</span>:
+            print(<span class="s3">&quot;AWS (EC2, VPC, CloudFormation, Lambda, Route53....)&quot;</span>
+                  &quot;Openstack&quot;
+                  &quot;Vagrant&quot;
+                  &quot;Docker&quot;
+                  )
+        <span class="s2">elif </span>skill == <span class="s3">&quot;DevOps Tools&quot;</span>:
+            print(<span class="s3">''' Teamcity/Jenkins/Travis CI 
+                Flyways, 
+                GitHub 
+                Jfrog Artifactory, 
+                ELK / NewRelic / Nagios, 
+                SonarQube  
+                '''</span>)
+
+    <span class="s2">def </span>work_history(self):
+        work = input(<span class="s3">&quot;Work History: &quot;</span>)
+        start_time = time.strftime(<span class="s3">&quot;%m/%Y&quot;</span>)
+        end_time = time.strftime(<span class="s3">&quot;%m/%Y&quot;</span>)
+        
+        <span class="s2">if </span>start_time == <span class="s3">&quot;08/2017&quot; </span><span class="s2">and </span>end_time == <span class="s3">&quot;current&quot;</span>:
+            work_history = {<span class="s3">&quot;PayPal/Hyperwallet Systems Inc&quot;</span>: <span class="s3">&quot;DevOps Engineer / Linux Senior Admin&quot;</span>,
+                            <span class="s3">&quot;Location&quot;</span>: <span class="s3">&quot;Vancouver, Canada&quot;</span>,
+                            <span class="s3">&quot;Duties&quot;</span>: [<span class="s3">&quot;A lot&quot;</span>]}
+            print(work_history)        
+
+        <span class="s2">elif </span>start_time == <span class="s3">&quot;05/2013&quot; </span><span class="s2">and </span>end_time == <span class="s3">&quot;07/2017&quot;</span>:
+            work_history = {<span class="s3">&quot;Cisco Systems LTD&quot;</span>: <span class="s3">&quot;Systems Engineer&quot;</span>,
+                            <span class="s3">&quot;Location&quot;</span>: <span class="s3">&quot;Southampton, UK&quot;</span>,
+                            <span class="s3">&quot;Duties&quot;</span>: [<span class="s3">''' 
+                                - Managing and monitoring all installed systems and infrastructure 
+                                   to ensure the highest level of availability. (Nagios/ELK/Grafana). 
+                                - Installing, configuring and testing operating systems, application software. 
+                                - Managing security, upgrade and deployment projects on-site. 
+                                - Built and provided high-level E2E, troubleshooting on Windows, Linux Systems. 
+                                - Overseeing development and maintenance of customers computer systems 
+                                   in Broadcasting industry, 
+                                - Maintain 24/7 availability for responsible systems. (On-call rotation). 
+                                - Providing CI based on Jenkins solution. 
+                                - Monitoring and testing application performance to identify potential bottlenecks, 
+                                   developing solutions, and collaborate with developers 
+                                   on solution implementation. 
+                                - Writing and maintaining custom scripts to increase system efficiency 
+                                   and performance time. 
+                                - Providing 2nd and 3rd level technical support and troubleshooting 
+                                   to internal and external clients. 
+                            '''</span>]}
+            print(work_history)
+
+        <span class="s2">elif </span>start_time == <span class="s3">&quot;02/2011&quot; </span><span class="s2">and </span>end_time == <span class="s3">&quot;05/2013&quot;</span>:
+            work_history = {<span class="s3">&quot;Nokia Siemens Network&quot;</span>: <span class="s3">&quot;Technical Support Engineer&quot;</span>,
+                            <span class="s3">&quot;Location&quot;</span>: <span class="s3">&quot;Wroclaw, Poland&quot;</span>,
+                            <span class="s3">&quot;Duties&quot;</span>: [<span class="s3">''' 
+                                    - Testing (E2E, IOT), 
+                                    - Trailing activities, 
+                                    - Providing 24/7 support (on-call rotation), 
+                                    - Design and implementation of test environment 
+                                       based on Linux RedHat servers., 
+                                    - Implementing VLAN solution at the customer side 
+                                       for Femto/Small Cells network., 
+                                    - Features verification, testing new features in new SW release., 
+                                    - Remote and onsite support for customers all over the world, 
+                                    - Providing internal training for customer teams regarding NSN Femto Solution, 
+                                    - Managing and maintenance experience in Core Networks (MSC, SGSN) 
+                                       during Femto integration at customer sites, 
+                                    - Tracking problems and solutions based on Resolve BMC Remedy, 
+                                       JIRA, Service Desk.&quot; 
+                                '''</span>]}
+            print(work_history)
+
+        <span class="s2">elif </span>start_time == <span class="s3">&quot;10/2007&quot; </span><span class="s2">and </span>end_time == <span class="s3">&quot;02/2011&quot;</span>:
+            work_history = {<span class="s3">&quot;TECE&quot;</span>: <span class="s3">&quot;Network Administrator&quot;</span>,
+                            <span class="s3">&quot;Location&quot;</span>: <span class="s3">&quot;Strzelin, Poland&quot;</span>,
+                            <span class="s3">&quot;Duties&quot;</span>: [<span class="s3">''' 
+                                    - Installation, upgrading and maintaining Servers Windows Server 2003 R2, 
+                                    - Managing Web server (Apache, IIS), 
+                                    - Linux server administration based on Debian 
+                                       (DHCP, Proxy server, Samba, IPtables) 
+                                       Novell SLES (Backup email server based on eDirecotry) 
+                                       Ubuntu with KVM for virtualisation., 
+                                    - Cisco device management (Switches, Routers), 
+                                    - Configuration routeing table, 
+                                    - Maintaining VPN connection between TECE headquarter and branch offices, 
+                                    - Creating websites (PHP, CSS, HTML), 
+                                    - Database administration of MySQL, MSSQL, 
+                                    - Helpdesk for 60 peoples in the TECE Poland office. 
+                                '''</span>]}
+            print(work_history)
+
+        <span class="s2">elif </span>start_time == <span class="s3">&quot;11/2005&quot; </span><span class="s2">and </span>end_time == <span class="s3">&quot;10/2007&quot;</span>:
+            work_history = {<span class="s3">&quot;PHOUA SP z o.o.&quot;</span>: <span class="s3">&quot;Network Administrator&quot;</span>,
+                            <span class="s3">&quot;Locaton&quot;</span>: <span class="s3">&quot;Wroclaw, Poland&quot;</span>,
+                            <span class="s3">&quot;Duties&quot;</span>: [<span class="s3">''' 
+                                    - Managing network infrastructure 
+                                    - Implementation WLAN access on Cisco devices 
+                                    - Maintaining Windows systems 
+                                    - Helpdesk 
+                                '''</span>]}
+            print(work_history)
+
+        <span class="s2">elif </span>start_time == <span class="s3">&quot;01/2005&quot; </span><span class="s2">and </span>end_time == <span class="s3">&quot;09/2005&quot;</span>:
+            work_history = {<span class="s3">&quot;Minimarket Max&quot;</span>: <span class="s3">&quot;Help Desk&quot;</span>,
+                            <span class="s3">&quot;Location&quot;</span>: <span class="s3">&quot;Strzelin, Poland&quot;</span>,
+                            <span class="s3">&quot;Duties&quot;</span>: <span class="s3">&quot;Programming fiscal cash registers.&quot;</span>}
+            print(work_history)
+
+    <span class="s2">def </span>education(self):
+        edu = input(<span class="s3">&quot;Education: &quot;</span>)
+        start_time = time.strftime(<span class="s3">&quot;%m/%Y&quot;</span>)
+
+        <span class="s2">if </span>start_time == <span class="s3">&quot;01/2010&quot;</span>:
+            education = {<span class="s3">&quot;Bachelor of Science&quot;</span>: <span class="s3">&quot;Computer Systems and Networks&quot;</span>,
+                         <span class="s3">&quot;School Name&quot;</span>: <span class="s3">&quot;Wroclaw High School of applied computing (WWSIS)&quot;</span>,
+                         <span class="s3">&quot;School Location&quot;</span>: <span class="s3">&quot;Wroclaw, Poland&quot;</span>}
+
+        <span class="s2">elif </span>start_time == <span class="s3">&quot;06/2006&quot;</span>:
+            education = {<span class="s3">&quot;Post-secondary school&quot;</span>: <span class="s3">&quot;IT&quot;</span>,
+                         <span class="s3">&quot;School Name&quot;</span>: <span class="s3">&quot;Secondary Study IT 'WIEDZA'&quot;</span>,
+                         <span class="s3">&quot;School Location&quot;</span>: <span class="s3">&quot;Wroclaw, Poland&quot;</span>}
+
+        <span class="s2">elif </span>start_time == <span class="s3">&quot;06/2004&quot;</span>:
+            education = {<span class="s3">&quot;Post-secondary school&quot;</span>: <span class="s3">&quot;IT&quot;</span>,
+                         <span class="s3">&quot;School Name&quot;</span>: <span class="s3">&quot;EZN Electronic Departments&quot;</span>,
+                         <span class="s3">&quot;School Location&quot;</span>: <span class="s3">&quot;Wroclaw, Poland&quot;</span>}
+
+    <span class="s2">def </span>hobby(self):
+        <span class="s2">while True</span>:
+            hobby = input(<span class="s3">&quot;Do you have a hobby: &quot;</span>)
+            <span class="s2">if </span>str.lower(hobby) == <span class="s3">&quot;y&quot;</span>:
+                print(<span class="s3">&quot;Photography, Hiking, Football, Cyber Security, Marial Arts&quot;</span>)
+</pre>
+</body>
+</html>
