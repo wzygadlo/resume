@@ -24,7 +24,7 @@ class Resume:
                Deep understanding on CISCO networks and hardware, quick problem resolution skills.
                Around 2,5 years experience in Mobile Networks (UMTS).
                4 years in Broadcasting industry (satellite/cable IPTV solutions)
-               4 years in DevOps environment'''
+               5 years in DevOps environment'''
         print(info)
 
     def skills(self):
