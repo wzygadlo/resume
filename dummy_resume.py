@@ -19,12 +19,9 @@ class Resume:
         super()
 
     def bio(self):
-        info = '''Overall 10 years of enterprise level UNIX administration experience with strong Linux
-               (RedHat, SLES, Ubuntu, Archlinux is the best), Scripting (BASH, Python).
-               Deep understanding on CISCO networks and hardware, quick problem resolution skills.
-               Around 2,5 years experience in Mobile Networks (UMTS).
-               4 years in Broadcasting industry (satellite/cable IPTV solutions)
-               5 years in DevOps environment'''
+        info = '''Experienced DevOps Engineer with a demonstrated history of working in the financial services industry. 
+                  Skilled in Oracle/MySQL Database, Linux System Administration, TeamCity, Amazon Web Services (AWS), GCP, CI/CD pipeline. 
+                  Strong engineering professional with a Engineer's degree focused in Information Technology '''
         print(info)
 
     def skills(self):
@@ -33,37 +30,35 @@ class Resume:
             print('''RHEL5/6/7, Debian, Ubuntu, SLES 11/12, Archlinux, and many more''')
 
         elif skill == "Network Skills":
-            print('''Switching (VLAN, Trunking, Link Aggregation), Wireless
-                Routing (RIPv2, OSPF, EIGRP),
-                Load balancing (HAProxy),
-                FibreChannel,
-                TCP/IP,
-                Network monitoring and analysing (Wireshark, nmap, Nagios),
-                Server setup (Apache, nginx, SSH, FTP, DHCP, NTP, SMB, NFS, OpenLDAP, VPN, AFP, SSL)''')
+            print('''Switching (VLAN, Link Aggregation), Wireless
+                     Routing (RIPv2, OSPF, EIGRP),
+                     Load balancing (HAProxy),
+                     FibreChannel,
+                     TCP/IP,
+                     Network monitoring and analysing (Wireshark, nmap, Nagios),
+                     Server setup (Apache, nginx, SSH, FTP, DHCP, NTP, SMB, NFS, OpenLDAP, VPN, AFP, SSL)''')
 
         elif skill == "Programming":
             print("Shell/BASH", "Python")
 
         elif skill == "Database":
-            print('''Oracle 10/11g DBA"
-                MySQL DBA,
-                MongoDB (query level),
-                SQL/SQLPlus)''')
+            print('''MySQL,
+                     SQL/SQLPlus''')
 
-        elif skill == "Cloud Solutions":
-            print("AWS (EC2, VPC, CloudFormation, Lambda, Route53....)"
-                  "Openstack"
-                  "Vagrant"
-                  "Docker"
-                  )
+        elif skill == "Cloud Providers/Solutions":
+            print('''AWS (EC2, VPC, CloudFormation, Lambda, Route53....),
+                     GCP,
+                     Docker,
+                     Kuberneties'''
+                 )
         elif skill == "DevOps Tools":
-            print(''' Teamcity/Jenkins/Travis CI
-                Flyways,
-                GitHub
-                Jfrog Artifactory,
-                ELK / NewRelic / Nagios,
-                SonarQube 
-                ''')
+            print('''Teamcity/Jenkins/Travis CI
+                     Flyways,
+                     GitHub,
+                     Jfrog Artifactory,
+                     ELK / NewRelic / Nagios,
+                     SonarQube'''
+                 )
 
     def work_history(self):
         work = input("Work History: ")
@@ -71,7 +66,7 @@ class Resume:
         end_time = time.strftime("%m/%Y")
         
         if start_time == "08/2017" and end_time == "current":
-            work_history = {"PayPal/Hyperwallet Systems Inc": "DevOps Engineer / Linux Senior Admin",
+            work_history = {"PayPal/Hyperwallet Systems Inc": "DevOps Engineer",
                             "Location": "Vancouver, Canada",
                             "Duties": ["A lot"]}
             print(work_history)        
