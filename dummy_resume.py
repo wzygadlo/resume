@@ -20,7 +20,7 @@ class Resume:
 
     def bio(self):
         info = '''Experienced DevOps Engineer with a demonstrated history of working in the financial services industry. 
-                  Skilled in Oracle/MySQL Database, Linux System Administration, TeamCity, Amazon Web Services (AWS), GCP, CI/CD pipeline. 
+                  Skilled in MySQL Database, Linux System Administration, TeamCity, Amazon Web Services (AWS), GCP, CI/CD pipelines. 
                   Strong engineering professional with a Engineer's degree focused in Information Technology '''
         print(info)
 
@@ -31,12 +31,11 @@ class Resume:
 
         elif skill == "Network Skills":
             print('''Switching (VLAN, Link Aggregation), Wireless
-                     Routing (RIPv2, OSPF, EIGRP),
                      Load balancing (HAProxy),
-                     FibreChannel,
                      TCP/IP,
                      Network monitoring and analysing (Wireshark, nmap, Nagios),
-                     Server setup (Apache, nginx, SSH, FTP, DHCP, NTP, SMB, NFS, OpenLDAP, VPN, AFP, SSL)''')
+                     Server setup (Apache, nginx, SSH, FTP, DHCP, NTP, SMB, NFS, OpenLDAP, VPN, AFP, SSL)'''
+                 )
 
         elif skill == "Programming":
             print("Shell/BASH", "Python")
@@ -45,16 +44,25 @@ class Resume:
             print('''MySQL,
                      SQL/SQLPlus''')
 
-        elif skill == "Cloud Providers/Solutions":
+        elif skill == "Cloud Solutions":
             print('''AWS (EC2, VPC, CloudFormation, Lambda, Route53....),
                      GCP,
                      Docker,
-                     Kuberneties'''
+                     Kubernetes/Helm,
+                     '''
+                 )
+        elif skill == "Automation":
+            print('''Ansible,
+                     Terraform,
+                     AWS CloudFormation,
+                     GCP Deployment Manager,
+                     Python (Fabric/SDK),
+                     Hashicorp Vault (security as a service)'''
                  )
         elif skill == "DevOps Tools":
             print('''Teamcity/Jenkins/Travis CI
                      Flyways,
-                     GitHub,
+                     GitHub/GitLab,
                      Jfrog Artifactory,
                      ELK / NewRelic / Nagios,
                      SonarQube'''
@@ -64,11 +72,45 @@ class Resume:
         work = input("Work History: ")
         start_time = time.strftime("%m/%Y")
         end_time = time.strftime("%m/%Y")
-        
-        if start_time == "08/2017" and end_time == "current":
-            work_history = {"PayPal/Hyperwallet Systems Inc": "DevOps Engineer",
+
+        if start_time == "10/2020" and end_time == "present":
+            work_history = {"PayPal": "Manager (Team Lead), DevOps Cloud Engineer",
                             "Location": "Vancouver, Canada",
-                            "Duties": ["A lot"]}
+                            "Duties": ['''
+                                - Providing DevOps best practices.
+                                - Performing continuous analysis of emerging concepts in DevOps, Infrastructure Automation, and Enterprise Security and build up the knowledge base.
+                                - Define, own, and continuously revise and communicate the DevOps roadmap.
+                                - Lead and coordinate the creation and improvement of Continuous Integration and Continuous Delivery environments.
+                                - Monitoring risks and managing/escalating issues.
+                                - Define and own effective metrics and reporting.
+                                - Identify roadblocks including technical, resourcing, cultural, and knowledge. Propose and execute mitigation strategies.
+                                - Own and lead initiatives to define, design, and implement DevOps solutions which includes reference architectures and estimates.
+                                - Promote DevOps to all stakeholders
+                                ''']}
+            print(work_history)  
+        
+        if start_time == "08/2017" and end_time == "10/2020":
+            work_history = {"PayPal/Hyperwallet Systems Inc": "DevOps Engineer/Sr Linux Admin",
+                            "Location": "Vancouver, Canada",
+                            "Duties": ['''
+                                - Building IaC for AWS/GCP and traditional VMware environments.
+                                - Designing and implementing a self-deploying fully automated cloud stack
+                                - Building Pipeline for all stages via TeamCity in AWS/GCP and on Prem 
+                                - Building and implementing automated software deployments at all stages.
+                                - Deploying application with Green/Blue strategy
+                                - implementation of a CI stack via TeamCity, leveraging cloud scaling for parallel builds and automated regression testing per code branch or commit
+                                Main technologies responsible for:
+                                - AWS
+                                - GCP 
+                                - RHEL 6 and 7
+                                - Java EJB application based on Glassfish/Payara
+                                - Hazelcast JMS brokers
+                                - MySQL
+                                - Nginx, HAProxy, F5
+                                - SignalScience 
+                                - Travis-CI and TeamCity for continuous integration
+                                - APM, logging, and monitoring - ELK, Splunk, New Relic, Nagios
+                                ''']}
             print(work_history)        
 
         elif start_time == "05/2013" and end_time == "07/2017":
