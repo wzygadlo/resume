@@ -21,7 +21,7 @@ class Resume:
     def bio(self):
         info = '''Experienced DevOps Engineer with a demonstrated history of working in the financial services industry. 
                   Skilled in MySQL Database, Linux System Administration, TeamCity, Amazon Web Services (AWS), GCP, CI/CD pipelines. 
-                  Strong engineering professional with a Engineer's degree focused in Information Technology '''
+                  Strong engineering professional with an Engineer's degree focused on Information Technology.'''
         print(info)
 
     def skills(self):
@@ -83,8 +83,8 @@ class Resume:
                                 - Lead and coordinate the creation and improvement of Continuous Integration and Continuous Delivery environments.
                                 - Monitoring risks and managing/escalating issues.
                                 - Define and own effective metrics and reporting.
-                                - Identify roadblocks including technical, resourcing, cultural, and knowledge. Propose and execute mitigation strategies.
-                                - Own and lead initiatives to define, design, and implement DevOps solutions which includes reference architectures and estimates.
+                                - Identify roadblocks, including technical, resourcing, cultural, and knowledge. Propose and execute mitigation strategies.
+                                - Own and lead initiatives to define, design, and implement DevOps solutions, including reference architectures and estimates.
                                 - Promote DevOps to all stakeholders
                                 ''']}
             print(work_history)  
@@ -117,13 +117,12 @@ class Resume:
             work_history = {"Cisco Systems LTD": "Systems Engineer",
                             "Location": "Southampton, UK",
                             "Duties": ['''
-                                - Managing and monitoring all installed systems and infrastructure
-                                   to ensure the highest level of availability. (Nagios/ELK/Grafana).
+                                - Managing and monitoring all installed systems and infrastructure to ensure the highest level of availability. (Nagios/ELK/Grafana).
                                 - Installing, configuring and testing operating systems, application software.
-                                - Managing security, upgrade and deployment projects on-site.
+                                - Managing security, upgrade, and deployment projects on-site.
                                 - Built and provided high-level E2E, troubleshooting on Windows, Linux Systems.
                                 - Overseeing development and maintenance of customers computer systems
-                                   in Broadcasting industry,
+                                   in the Broadcasting industry,
                                 - Maintain 24/7 availability for responsible systems. (On-call rotation).
                                 - Providing CI based on Jenkins solution.
                                 - Monitoring and testing application performance to identify potential bottlenecks,
@@ -140,10 +139,10 @@ class Resume:
             work_history = {"Nokia Siemens Network": "Technical Support Engineer",
                             "Location": "Wroclaw, Poland",
                             "Duties": ['''
-                                    - Testing (E2E, IOT),
+                                    - Testing (E2E, IoT),
                                     - Trailing activities,
                                     - Providing 24/7 support (on-call rotation),
-                                    - Design and implementation of test environment
+                                    - Design and implementation of a test environment
                                        based on Linux RedHat servers.,
                                     - Implementing VLAN solution at the customer side
                                        for Femto/Small Cells network.,
